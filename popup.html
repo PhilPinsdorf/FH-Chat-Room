@@ -4,17 +4,21 @@
 		<link rel="stylesheet" href="stylesheet.css" />
 	</head>
 	<body>
-		<div class="Header">
-			DER FH CHAT ROOM
+		<div class="header">DER FH CHAT ROOM</div>
+		<div class="messages">
+			<div class="message">Test</div>
+			<div class="message">Phil</div>
+			<div class="message">HEndrik</div>
+			<div class="message">Message</div>
+			<div class="message">LAuf!</div>
 		</div>
-		<div class="input-group">
-			<div class="text">
-				<input id="textfeld" type="text" name="Textfeld" value="" size="40">
-			</div>
-			<div class="knopf">
-				<input id="Button" type="submit">
-			</div>
-			
+		<div class="input">
+			<input id="textinput" type="text" />
+			<button class="send-button">Send!</button>
 		</div>
+
+		<template>
+			<div class="message"></div>
+		</template>
 	</body>
 </html>
