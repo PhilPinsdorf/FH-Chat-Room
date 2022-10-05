@@ -21,7 +21,7 @@ pullLast10();
 
 function pullLast10() {
   var c = collection(db, "messages")
-  var q = query(c, orderBy("date", "desc"), limit(10));
+  var q = query(c, orderBy("date"), limit(10));
 
   getDocs(q).then((res) => {
     res.forEach((doc) => {
@@ -41,9 +41,11 @@ function pullLast10() {
 
 
 
+
+
 /*
 Ablauf:
- - Bei Start: Lade die letzten 10 Nachichten in ein JSON Objekt, dass dann immer angezeigt wird, wenn das Popup geöffnet wird.
+ - Bei Start: Lade die letzten 10 Nachichten in ein JSON Objekt, dass dann immer angezeigt wird, wenn das Popup geöffnet wird. 
  - Bei Hook: Füge Nachicht in JSON Objekt hinzu und aktualisier Tabelle in Popup 
  - Bei Send: Füge Nachicht in JSON Objekt hinzu, pushe in Database und aktualisier Tabelle in Popup
 */

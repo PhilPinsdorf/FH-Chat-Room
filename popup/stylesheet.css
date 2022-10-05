@@ -24,7 +24,7 @@ body {
     display: inline;
 }
 
-.messages {
+#messages {
     overflow-y: scroll;
     width: calc(100% - 20px);
     height: calc(84% - 30px);
