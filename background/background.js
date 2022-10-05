@@ -21,7 +21,7 @@ pullLast10();
 
 function pullLast10() {
   var c = collection(db, "messages")
-  var q = query(c, orderBy("date"), limit(10));
+  var q = query(c, orderBy("date", "desc"), limit(10));
 
   getDocs(q).then((res) => {
     res.forEach((doc) => {
@@ -30,7 +30,7 @@ function pullLast10() {
       message.text = doc.data().message;
       message.date = doc.data().date;
       
-      message_cache.push(message);
+      message_cache.unshift(message);
     });
   });
 

@@ -16,12 +16,12 @@ body {
     border-radius: 15px;
 }
 
-.chat{
-    display: inline;
+#chat{
+    display: none;
 }
 
-.login{
-    display: none;
+#login{
+    display: inline;
 }
 
 #messages {

@@ -1,7 +1,9 @@
 var message_container = document.getElementById("messages"); 
 var login_button = document.getElementById("send-button-login"); 
 
-hasUsername();
+var username;
+
+showLoginScreen();
 loadMessageCache();
 
 function loadMessageCache() {
@@ -13,15 +15,31 @@ function loadMessageCache() {
 }
 
 function hasUsername() {
-    chrome.storage.sync.get(['user'], function(result) {
-        console.log(result);
+    chrome.storage.local.get(['user'], function(result) {
+        console.log(result.user)
+
+        /*if(result.user != undefined) {
+            username = result.user;
+            return true;
+        }
+
+        return false;*/
     });
 }
 
+function showLoginScreen() {
+    console.log(hasUsername());
+    if(hasUsername()) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("chat").style.display = "inline";
+    }
+}
+
 login_button.addEventListener('click', function() {
-    var username = document.getElementById("textinput-login").value;
-    chrome.storage.local.set({user: username}, function() {
-        console.log('Saved Username: ' + username);
+    var new_username = document.getElementById("textinput-login").value;
+    chrome.storage.local.set({user: new_username}, function() {
+        console.log('Saved Username: ' + new_username);
+        username = new_username;
     });
 });
 
