@@ -1,7 +1,7 @@
 var background = chrome.extension.getBackgroundPage(); 
 const element = document.getElementById(""); 
 
-loadMessageCache();
+// loadMessageCache();
 
 function loadMessageCache() {
     background.message_cache.forEach(element => {
