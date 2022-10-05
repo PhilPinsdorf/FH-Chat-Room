@@ -16,19 +16,51 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: left;
-    gap: 30px 20px;
+    gap: 10px;
+}
+.message{
+    border-radius: 5px;
+    border: 2px solid #dedede;
+    padding: 10px;
+    margin: 10px 0;
+}
+.message::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+.send {
+    border-color: #ccc;
+    background-color: #ddd;
+  }
+.received{
+    background-color: #afabab;
+}
+.time-right {
+    float: right;
+    color: rgb(119, 119, 119);
+}
+.time-left {
+    float: left;
+    color: rgb(104, 103, 103);
 }
 #Button{
     font-size: 1.3em; 
     padding: 5px 12px; 
-    font-family: "Arial Black", Gadget, sans-serif;
     color:rgb(0, 177, 172);
     border: 1px solid black;
     border-radius: 20px;
 }
+#Button:hover{
+    color: black;
+}
+#Button:active{
+    background-color: black;
+    color: white;
+}
 #textfeld{
     border-radius: 5px;
     padding: 5px 12px;
-    width: 250px;
+    width: 270px;
     border-radius: 20px;
 }

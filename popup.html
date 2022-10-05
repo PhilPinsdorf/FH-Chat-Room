@@ -7,6 +7,16 @@
 		<div class="Header">
 			DER FH CHAT ROOM
 		</div>
+		<div class="Chat">
+			<div class="message send">
+				<p>Ich hasse TI</p>
+				<span class="time-right">18:90</span>
+			</div>
+			<div class="message received">
+				<p>Ich auch</p>
+				<span class="time-left">14:20</span>
+			</div>
+		</div>
 		<div class="input-group">
 			<div class="text">
 				<input id="textfeld" type="text" name="Textfeld" value="" size="40">
@@ -14,7 +24,13 @@
 			<div class="knopf">
 				<input id="Button" type="submit">
 			</div>
-			
+			<script>
+				input.addEventListener("keypress", function(event) {
+				  if (event.key === "Enter") {
+					document.getElementById("Button").click();
+				  }
+				});
+			</script>
 		</div>
 	</body>
 </html>
