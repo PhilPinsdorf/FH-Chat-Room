@@ -1,11 +1,12 @@
-var background = chrome.extension.getBackgroundPage(); 
-const element = document.getElementById(""); 
+var message_container = document.getElementById("messages"); 
 
-// loadMessageCache();
+loadMessageCache();
 
 function loadMessageCache() {
-    background.message_cache.forEach(element => {
-        
+    chrome.runtime.sendMessage({type: "getMessageCache"}, function(response) {
+        response.messageCache.forEach(element => {
+            message_container.innerHTML += element.user + ": " + element.text + "<br>"
+        });
     });
 }
 

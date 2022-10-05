@@ -17,11 +17,11 @@ body {
 }
 
 .chat{
-    display: none;
+    display: inline;
 }
 
 .login{
-    display: inline;
+    display: none;
 }
 
 #messages {

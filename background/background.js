@@ -37,10 +37,12 @@ function pullLast10() {
   console.log(message_cache);
 }
 
-
-
-
-
+chrome.runtime.onMessage.addListener(
+  function(request, sender, sendResponse) {
+    if (request.type === "getMessageCache")
+      sendResponse({messageCache: message_cache});
+  }
+);
 
 
 /*
