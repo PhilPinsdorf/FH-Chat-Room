@@ -1,66 +1,46 @@
 body {
     width: 400px;
     height: 500px;
-}
-.Header{
-    text-align: center;
-    font-family: "Arial Black", Gadget, sans-serif;
-    color: rgb(0, 177, 172);
-    font-size: 16px;
-    letter-spacing: 2px;
-    word-spacing: 2px;
-}
-.input-group{
-    position: absolute;
-    bottom: 15px;
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    gap: 10px;
-}
-.message{
-    border-radius: 5px;
-    border: 2px solid #dedede;
-    padding: 10px;
-    margin: 10px 0;
-}
-.message::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-.send {
-    border-color: #ccc;
-    background-color: #ddd;
-  }
-.received{
-    background-color: #afabab;
-}
-.time-right {
-    float: right;
-    color: rgb(119, 119, 119);
-}
-.time-left {
-    float: left;
-    color: rgb(104, 103, 103);
-}
-#Button{
-    font-size: 1.3em; 
-    padding: 5px 12px; 
-    color:rgb(0, 177, 172);
+    background-color: #212121;
     border: 1px solid black;
-    border-radius: 20px;
-}
-#Button:hover{
-    color: black;
-}
-#Button:active{
-    background-color: black;
     color: white;
 }
-#textfeld{
-    border-radius: 5px;
-    padding: 5px 12px;
-    width: 270px;
-    border-radius: 20px;
+
+.header{
+    text-align: center;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: white;
+    font-size: 20px;
+    background-color: #101010;
+    
+    width: 100%;
+    height: 8%;
+    border-radius: 15px;
+}
+
+.messages {
+    overflow-y: scroll;
+    width: calc(100% - 20px);
+    height: calc(84% - 30px);
+    margin: 5px 0px 5px 0px;
+    background-color: #101010;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.input{
+    width: 100%;
+    height: 8%;
+    background-color: #101010;
+    border-radius: 15px;
+}
+
+.send-button{
+    
+}
+
+.textinput{
+    border-radius: 15px;
+    background-color: black;
 }
