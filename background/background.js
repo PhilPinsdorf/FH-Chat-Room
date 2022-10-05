@@ -1,7 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-import { getFirestore, addDoc, collection, getDocs } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js'
-
+import { getFirestore, addDoc, collection, getDocs, query, orderBy, limit  } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js'
 
 const firebaseConfig = {
     apiKey: "AIzaSyA0RO5Yujusyw8T1ypBapibhs-qftyw_Tg",
@@ -13,15 +12,33 @@ const firebaseConfig = {
     measurementId: "G-4Y704HZKYZ"
 };
 
+var message_cache = []
+
 // Initialize Firebase and Database
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
+pullLast10();
 
-getDocs(collection(db, "messages")).then((res) => {
-  res.forEach((doc) => {
-    console.log(`${doc.data().user}: ${doc.data().message}`);
+function pullLast10() {
+  var c = collection(db, "messages")
+  var q = query(c, orderBy("date", "desc"), limit(10));
+
+  getDocs(q).then((res) => {
+    res.forEach((doc) => {
+      var message = {};
+      message.user = doc.data().user;
+      message.text = doc.data().message;
+      message.date = doc.data().date;
+      
+      message_cache.push(message);
+    });
   });
-});
+
+  console.log(message_cache);
+}
+
+
+
 
 
 /*
