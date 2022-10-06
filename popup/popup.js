@@ -1,5 +1,6 @@
 var message_container = document.getElementById("messages"); 
 var login_button = document.getElementById("send-button-login"); 
+const buttons = document.getElementById("send-button-login");
 
 var username;
 
@@ -42,6 +43,16 @@ login_button.addEventListener('click', function() {
         username = new_username;
     });
 });
+
+
+login_button.addEventListener('click', function() {
+    console.log('Lets Bread');
+    var layers = document.querySelectorAll(".top-layer");
+    for (const layer of layers) {
+        layer.classList.toggle("active");
+    }
+});
+
 
 
 function addMessage() {
