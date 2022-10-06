@@ -43,7 +43,7 @@ body {
 
 }
 
-.send-button{
+#send-button{
     border-radius: 15px;
     color: rgb(0, 177, 172);
     border-color: rgb(0, 177, 172);
@@ -52,11 +52,11 @@ body {
     margin-top: 6px;
     width: 15%;
 }
-.send-button:hover{
+#send-button:hover{
     color: white;
     background-color: rgba(0, 177, 171, 0.37);
 }
-.send-button:active{
+#send-button:active{
     color: black;
     background-color: rgb(0, 177, 172);
 }
