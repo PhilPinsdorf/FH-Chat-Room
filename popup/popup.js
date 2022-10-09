@@ -1,6 +1,7 @@
 // Dom Elements that need to be manipulated
 var message_container = document.getElementById("messages"); 
 var login_button = document.getElementById("send-button-login"); 
+const buttons = document.getElementById("send-button-login");
 var text_input = document.getElementById("textinput"); 
 var send_button = document.getElementById("send-button"); 
 
@@ -78,5 +79,11 @@ login_button.addEventListener('click', function() {
 
 
 
-
-
+// Hendriks Slide Animation
+login_button.addEventListener('click', function() {
+    console.log('Lets Bread');
+    var layers = document.querySelectorAll(".top-layer");
+    for (const layer of layers) {
+        layer.classList.toggle("active");
+    }
+});
