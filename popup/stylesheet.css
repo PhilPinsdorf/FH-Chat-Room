@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 /* $black: rgba(0, 0, 0, 1);
 $fh-farben: rgba(0, 177, 172, 1);
 $white: rgba(241, 247, 238, 1);
@@ -13,15 +15,18 @@ body {
 
 .header{
     text-align: center;
-    font-family: "Arial Black", Gadget, sans-serif;
+    width: 100%;
+    height: 6%;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: bold; 
     color: rgb(0, 177, 172);
     font-size: 20px;
     background-color: #101010;
-    width: 100%;
-    height: 6%;
     border-radius: 15px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    margin-bottom: 2%;
+
+    padding-top: calc(3% + 10px);
 }
 
 #chat{
@@ -87,52 +92,50 @@ body {
 
 .input-login{
     width: 100%;
-    height: 100%;
+    height: calc(100% - 2% - 6%);
     background-color: #101010;
     border-radius: 15px;
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+}
+
+.input-elements {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#textinput-login {
+    text-align: center;
+    margin-left: 15%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 70%;
+    height: 25px;
 }
 
 #send-button-login{
-    margin-left: 5%;
-    margin-top: 5%;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 20px;
     border-radius: 15px;
-    color: rgb(0, 177, 172);
-    border-color: rgb(0, 177, 172);
-    background-color: rgb(0, 0, 0);
-    padding: 5px;
-    width: 90%;
+    border: none;
+    background-color: white;
+    width: 50%;
+    height: 25px;
+
+    color: black;
+    font-weight: bold;
+    background-color: rgb(0, 177, 172);
 }
 #send-button-login:hover{
-    color: rgba(241, 247, 238, 1);
-    background-color: rgba(132, 130, 143, 0.493);
+    color: white;
+    background-color: #505050;
 }
 #send-button-login:active{
     color: black;
-    background-color: rgb(0, 177, 172);
+    background-color: white;
 }
-
-#textinput-login{
-    text-align: center;
-    outline: none;
-    transition: ease-in-out 0.5s;
-    margin-left: 3%;
-    border-radius: 15px;
-    border-color: rgb(0, 177, 172);
-    background-color: rgba(241, 247, 238, 1);
-    padding: 5px;
-    padding-left: 10px;
-    margin-top: 50%;
-    width: 90%;
-}
-
-#textinput-login:focus{
-    transition: ease-in-out 0.5s;
-    border-color: rgb(0, 177, 172);
-    border-radius: 5px;
-}
-
 
 .top-layer {
     position: absolute;
