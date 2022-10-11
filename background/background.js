@@ -30,7 +30,8 @@ const firebaseConfig = {
 };
 
 // Set Badge Color
-chrome.action.setBadgeBackgroundColor({color: 'red'});
+console.log(chrome);
+chrome.browserAction.setBadgeBackgroundColor({color: 'red'});
 
 // Initialize Firebase and Database
 const app = initializeApp(firebaseConfig);
@@ -111,14 +112,14 @@ function increaseUnread() {
   unreadMessages += 1;
 
   if (unreadMessages >= 10) {
-    chrome.action.setBadgeText({text: "10+"}); 
+    chrome.browserAction.setBadgeText({text: "10+"}); 
   } else {
-    chrome.action.setBadgeText({text: unreadMessages + ""}); 
+    chrome.browserAction.setBadgeText({text: unreadMessages + ""}); 
   }
     
 }
 
 function removeUnread() {
   unreadMessages = 0;
-  chrome.action.setBadgeText({text: ""}); 
+  chrome.browserAction.setBadgeText({text: ""}); 
 }

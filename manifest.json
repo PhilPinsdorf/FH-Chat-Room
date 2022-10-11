@@ -2,13 +2,20 @@
     "name": "FH Aachen Chat Room",
     "description": "Building a Chat Room Extension for the FH Aachen, because we are bored!",
     "version": "1.0",
-    "manifest_version": 3,
+    "manifest_version": 2,
     "permissions": ["storage"],
     "background": {
-        "service_worker": "background/background.js",
-        "type": "module"
+        "page": "background/background.html",
+        "persistent": true
     },
-    "action": {
+    "icons": {
+        "16": "/images/icon16.png",
+        "32": "/images/icon32.png",
+        "48": "/images/icon48.png",
+        "128": "/images/icon128.png"
+    },
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/; object-src 'self'",
+    "browser_action": {
         "default_popup": "popup/popup.html",
         "default_icon": {
             "16": "/images/icon16.png",
@@ -16,11 +23,5 @@
             "48": "/images/icon48.png",
             "128": "/images/icon128.png"
         }
-    },
-    "icons": {
-        "16": "/images/icon16.png",
-        "32": "/images/icon32.png",
-        "48": "/images/icon48.png",
-        "128": "/images/icon128.png"
     }
 }
