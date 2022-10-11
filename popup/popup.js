@@ -17,7 +17,7 @@ port.onMessage.addListener(function(packet) {
     switch (packet.type) {
         // Receive Message Cache from Backend
         case "receiveMessageCache":
-            packet.messageCache.forEach(element => {addMessage(element)});
+            packet.messageCache.forEach(element => {addMessage(element); console.log(element);});
             break;
         
         // Receive Message from Backend
@@ -32,8 +32,10 @@ port.postMessage({type: "getMessageCache"});
 
 // When the Send Button is Clicked Send Message back to Background Script
 send_button.addEventListener('click', function() {
-    port.postMessage({type: "sendMessage", message: {user: username, text: text_input.value}});
-    text_input.value = "";
+    if(text_input.value != "") {
+        port.postMessage({type: "sendMessage", message: {user: username, text: text_input.value}});
+        text_input.value = "";
+    }
 });
 
 // Add a Message to the messages div

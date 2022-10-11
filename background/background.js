@@ -39,10 +39,12 @@ const c = collection(db, "messages");
 const q = query(c, where("date", ">", start_timestamp));
 
 // Listen for Updates from Database
-onSnapshot(q, (snapshot) => {
+const unsubscribe = onSnapshot(q, (snapshot) => {
   snapshot.docChanges().forEach((change) => {
-    if (change.type === "added") 
+    if (change.type === "added") {
+      console.log("Received: " + change.doc.data());
       addMessage(change.doc.data());
+    }
   });
 });
 
