@@ -81,9 +81,14 @@ login_button.addEventListener('click', function() {
 
 // Hendriks Slide Animation
 login_button.addEventListener('click', function() {
-    console.log('Lets Bread');
     var layers = document.querySelectorAll(".top-layer");
     for (const layer of layers) {
         layer.classList.toggle("active");
     }
 });
+
+text_input.addEventListener('keyup', function(event){
+    if (event.key === 'Enter') {
+        send_button.click();
+    }
+})
