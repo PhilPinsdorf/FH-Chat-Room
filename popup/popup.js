@@ -75,7 +75,7 @@ login_button.addEventListener('click', function() {
     chrome.storage.local.set({user: new_username}, function() {
         console.log('Saved Username: ' + new_username);
         username = new_username;
-        shouldShowLoginScreen();
+        setTimeout(2000, shouldShowLoginScreen());
     });
 });
 

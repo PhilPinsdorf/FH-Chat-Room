@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="stylesheet.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	</head>
 	<body>
 		<div class="header">DER FH CHAT ROOM</div>
@@ -9,17 +10,12 @@
 			<div id="messages"></div>
 			<div class="input">
 				<input id="textinput" type="text" />
-				<button id="send-button">Send!</button>
+				<button id="send-button">
+					<i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i>
+				</button>
 			</div>
 		</div>
 		<div id="login">
-			<div class="container">
-				<div class="top-layer"></div>
-				<div class="top-layer top-layer--2"></div>
-				<div class="top-layer top-layer--3"></div>
-				<div class="top-layer top-layer--4"></div>
-				<div class="top-layer top-layer--5"></div>
-			</div>
 			<div class="input-login">
 				<div class="input-elements">
 					<input id="textinput-login" type="text" placeholder="Dein Name" />
@@ -27,9 +23,13 @@
 				</div>
 			</div>
 		</div>
-		<template>
-			<div class="message"></div>
-		</template>
+		<div class="container">
+			<div class="top-layer"></div>
+			<div class="top-layer top-layer--2"></div>
+			<div class="top-layer top-layer--3"></div>
+			<div class="top-layer top-layer--4"></div>
+			<div class="top-layer top-layer--5"></div>
+		</div>
 	</body>
 	<script src="popup.js"></script>
 </html>
