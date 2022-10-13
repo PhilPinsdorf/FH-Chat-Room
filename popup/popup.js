@@ -41,7 +41,7 @@ send_button.addEventListener('click', function() {
 // Add a Message to the messages div
 function addMessage(message) {
     const messageElement = document.createElement('p');
-    messageElement.innerText += message.user + ": " + message.text + "\n";
+    messageElement.innerText += message.user + ": " + message.text;
     message_container.append(messageElement);
 }
 
