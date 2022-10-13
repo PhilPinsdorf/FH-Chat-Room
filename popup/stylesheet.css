@@ -65,6 +65,23 @@ body {
     border-radius: 5px;
 }
 
+.inputtype {
+    display: inline-block;
+    background-color: #101010;
+    border: none;
+    outline: none;
+    width: 13%;
+    height: 6vh;
+    color: rgb(0, 177, 172);
+    border-radius: 15px;
+    margin-right: 1%;
+    font-family: 'FontAwesome';
+    font-size: 18px;
+    padding: 0px;
+    padding-left: 8px;
+    cursor: pointer;
+}
+
 #send-button{
     border-radius: 15px;
     color: rgb(0, 177, 172);
@@ -94,7 +111,7 @@ body {
     border-radius: 15px;
     outline: none;
     border: none;
-    width: 80%;
+    width: 65%;
     background-color: #101010;
     height: 6vh;
     padding-left: 15px;
